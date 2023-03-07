@@ -1,13 +1,13 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 def fizzbuzz():
-	""" prints fizz and buzz for mulitples of 3 and 5 """
-	for i in range(1, 101):
-		if i % 15 == 0:
-			print("fizzbuzz", end="")
-		elif i % 3 == 0:
-			print("fizz", end="")
-		elif i % 5 == 0:
-			print("Buzz", end="")
-		else:
-			print(i, end="")
-		print(" ", end="")
+    """ prints fizz and buzz for mulitples of 3 and 5 """
+    for i in range(1, 101):
+        if i % 15 == 0:
+            print("fizzbuzz", end="")
+        elif i % 3 == 0:
+            print("fizz", end="")
+        elif i % 5 == 0:
+            print("Buzz", end="")
+        else:
+            print(i, end="")
+        print(" ", end="")
