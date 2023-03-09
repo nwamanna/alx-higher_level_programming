@@ -11,5 +11,5 @@ if __name__ == "__main__":
         else:
             print("{} arguments:".format(len(array) - 1))
         while i < len(array):
-	        print('{:d}: {}'.format(i, array[i]))
-	        i += 1
+            print('{:d}: {}'.format(i, array[i]))
+            i += 1
