@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    """ prints all integers in a matrix """
+    """ print elements in a list """
     for i in matrix:
         for j in i:
-            print(j, end=' ')
+            if i.index(j) < len(i) - 1:
+                print("{:d}".format(j), end=" ")
+            else:
+                print("{:d}".format(j), end="")
         print()
