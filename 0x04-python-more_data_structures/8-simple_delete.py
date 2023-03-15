@@ -1,4 +1,4 @@
-#!/usr/bin/
+#!/usr/bin/python3
 def simple_delete(a_dictionary, key=""):
     """ deletes key in dictionary """
     if type(key) != str:
