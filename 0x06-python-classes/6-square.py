@@ -17,13 +17,13 @@ class Square:
         TypeError: size must be an integer
         ValueError: size must be greater or equal to Zero
     """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.__set_size(size)
         self.position = position
 
     @property
     def position(self):
-         return self.__position
+        return self.__position
 
     @position.setter
     def position(self, value):
@@ -68,11 +68,14 @@ class Square:
         while (n):
             h = self.__position[0]
             while (h):
-                print(" ", end="")
+                if self.__position[1] > 0:
+                    print("_", end="")
+                else:
+                    print(" ", end="")
                 h -= 1
             j = self.__size
             while (j):
-                 print("#", end="")
-                 j -= 1
+                print("#", end="")
+                j -= 1
             print()
             n -= 1
