@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This Module creates a class called Square """
 
 
 class Square:
