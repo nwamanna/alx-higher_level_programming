@@ -68,16 +68,17 @@ class Square:
         h = self.__position[0]
         if n == 0:
             print()
-        if self.__position[1] > 0:
-            print()
-        while (n):
-            h = self.__position[0]
-            while (h):
-                print(" ", end="")
-                h -= 1
-            j = self.__size
-            while (j):
-                print("#", end="")
-                j -= 1
-            print()
-            n -= 1
+        else:
+            if self.__position[1] > 0:
+                print()
+            while (n):
+                h = self.__position[0]
+                while (h):
+                    print(" ", end="")
+                    h -= 1
+                j = self.__size
+                while (j):
+                    print("#", end="")
+                    j -= 1
+                print()
+                n -= 1
