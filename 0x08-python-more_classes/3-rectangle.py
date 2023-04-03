@@ -47,7 +47,7 @@ class Rectangle:
         return p
 
     def __str__(self):
-        l = []
+        rec = []
         w = self.width
         h = self.height
         if w == 0 or h == 0:
@@ -55,11 +55,14 @@ class Rectangle:
         while h:
             i = 0
             while i < w:
-                l.append("#")
+                rec.append("#")
                 i += 1
-            l.append("\n")
+            if h == 1:
+                break
+            rec.append("\n")
             h -= 1
-        return "".join(l)
+        return "".join(rec)
 
     def __repr__(self):
-        return f"<3-rectangle.{self.__class__.__name__} object at {hex(id(self))}>"
+        return f"<3-rectangle.{self.__class__.__name__} \
+		object at {hex(id(self))}>".replace("\t", "")
