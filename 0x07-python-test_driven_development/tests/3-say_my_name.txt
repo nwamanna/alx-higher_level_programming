@@ -1,0 +1,32 @@
+==========================
+Help for 3-say_my_name.py
+==========================
+This module contains one function only `say_my_name`
+
+first and last name
+====================
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Ngozi", "Nwamanna")
+    My name is Ngozi Nwamanna
+    >>> say_my_name("Amaka", "Nwamanna")
+    My name is Amaka Nwamanna
+
+first name only
+===============
+    >>> say_my_name("Jayden") #doctest: +NORMALIZE_WHITESPACE
+    My name is Jayden
+
+
+first name is a number
+======================
+    >>> say_my_name(75, "Badmus") #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+last name is a boolean
+=======================
+    >>> say_my_name("Ada", False) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string

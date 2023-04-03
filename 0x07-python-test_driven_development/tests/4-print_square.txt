@@ -1,0 +1,55 @@
+==========================
+Help for 4-print_square.py
+==========================
+The `print_square()` print the square
+
+Print square with size of postive integer
+=========================================
+    >>> print_square = __import__('4-print_square').print_square
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+    >>> print_square(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
+
+Print square with size of negative integer
+==========================================
+    >>> print_square(-7) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+Print square with size of a float
+=================================
+    >>> print_square(98.6567) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+print square with size of negative float
+========================================
+    >>> print_square(-734.9683) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Print square with size of a string
+=================================
+    >>> print_square("square") #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ... 
+    TypeError: size must be an integer
+
+Print square with size as a list
+================================
+    >>> print_square([6]) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer

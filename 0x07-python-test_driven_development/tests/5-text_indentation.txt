@@ -1,0 +1,43 @@
+==============================
+Help for 5-text_indentation.py
+==============================
+This text file contains `text_indentation()` help text
+
+Indents Strings with ., ?, :
+============================
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text = "I am Ngozi. I am a girl: a tech woman. Do you understand?"
+    >>> text_indentation(text)
+    I am Ngozi.
+    <BLANKLINE>
+    I am a girl:
+    <BLANKLINE>
+    a tech woman.
+    <BLANKLINE>
+    Do you understand?
+    <BLANKLINE>
+
+Strings without ., ?, :
+=======================
+    >>> statement = "I love you so much, trust every word i say>"
+    >>> text_indentation(statement)
+    I love you so much, trust every word i say>
+
+Integers
+=========
+    >>> word = 124367357
+    >>> text_indentation(word) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Only ., ?, :
+============
+    >>> text_indentation(".:?")
+    .
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    >>>

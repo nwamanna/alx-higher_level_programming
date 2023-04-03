@@ -1,0 +1,67 @@
+==============================
+How to use 2-matrix_divided.py
+==============================
+
+This library is very simple as it contains one function
+`matrix_divided()`. It takes a matrix and an integer as arguments
+
+Matrix
+======
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6], [6, 7, 8]]
+    >>> matrix_divided(matrix, 2)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.0, 3.5, 4.0]]
+
+List
+====
+    #>>> mat = [5.66, 7, 98, 67.9998]
+    #>>> matrix_divided(mat, 2) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Set
+===
+    >>> matrix = {3, 7, 8}
+    >>> matrix_divided(matrix, 2) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Not all elements are numbers
+============================
+    >>> matrix = [[9.8, 7, 4], [67, 'bat', 8], [78, -87, 56]]
+    >>> matrix_divided(matrix, 2) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Different row length
+====================
+    >>> matrix = [[5, 8, 10], [45, 78, 45], [7, 6, 4, 3]]
+    >>> matrix_divided(matrix, 2) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size
+
+Division by string
+==================
+    >>> matrix = [[45, 32, 33], [98, 78, 45], [24, 36, 99]]
+    >>> matrix_divided(matrix, 'dog') #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+Division by Zero
+================
+    >>> matrix = [[45, 32, 33], [98, 78, 45], [24, 36, 99]]
+    >>> matrix_divided(matrix, 0) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: divison by zero
+
+Round to 2 decimal places
+=========================
+    >>> matrix = [[45.8875, 32.98765, 33.9876], [98.87544, 78.87654, 45.8765], [24.0987, 36.886543, 99.7689554]]
+    >>> matrix_divided(matrix, 1)
+    [[45.89, 32.99, 33.99], [98.88, 78.88, 45.88], [24.1, 36.89, 99.77]]
