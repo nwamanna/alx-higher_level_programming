@@ -1,0 +1,17 @@
+==============================
+Help text for 1-my_list.py
+==============================
+    >>> MyList = __import__('1-my_list').MyList
+    >>> issubclass(MyList, list)
+    True
+
+TEST SORT
+=========
+    >>> new_list = MyList()
+    >>> new_list.append(10)
+    >>> new_list.append(50)
+    >>> new_list.append(3)
+    >>> print(new_list)
+    [10, 50, 3]
+    >>> new_list.print_sorted()
+    [3, 10, 50]
