@@ -14,8 +14,9 @@ class Student:
     def to_json(self, attrs=None):
         serial_dict = {}
         for key, value in self.__dict__.items():
-            if attrs != None:
-                if key in attrs and isinstance(value, (list, dict, str, int, bool)):
+            test = isinstance(value, (list, dict, str, int, bool))
+            if attrs is not None:
+                if key in attrs and test:
                     serial_dict[key] = value
             else:
                 if isinstance(value, (list, dict, str, int, bool)):
