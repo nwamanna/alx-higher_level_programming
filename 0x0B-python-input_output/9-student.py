@@ -17,4 +17,3 @@ class Student:
             if isinstance(value, (list, dict, str, int, bool)):
                 serial_dict[key] = value
         return serial_dict
-    
