@@ -21,6 +21,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """ updates the attributes of square """
         if args and type(args) is not dict:
             self.id = args[0]
             if len(args) > 1:
@@ -41,6 +42,7 @@ class Square(Rectangle):
                 self.y = kwargs['y']
 
     def to_dictionary(self):
+        """ returns a dictionary containing attributes """
         sqr_dict = {}
         sqr_dict['x'] = self.x
         sqr_dict['y'] = self.y

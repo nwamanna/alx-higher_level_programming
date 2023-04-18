@@ -4,6 +4,7 @@ from .base import Base
 
 
 def validate(name, value):
+    """ validates type and value of value """ 
     if type(value) != int:
         raise TypeError(f'{name} must be an integer')
     if value <= 0:
@@ -11,6 +12,7 @@ def validate(name, value):
 
 
 def validate_xy(name, value):
+    """ validates type and value of value """
     if type(value) != int:
         raise TypeError(f'{name} must be an integer')
     if value < 0:
@@ -63,9 +65,11 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
+        """ returns area of rectangle """
         return self.width * self.height
 
     def display(self):
+        """ prints rectangle to stdout """
         height = self.height
         width = self.width
         x = self.x
@@ -89,6 +93,7 @@ class Rectangle(Base):
         return f'[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y} -  {self.width}/{self.height}'
 
     def update(self, *args, **kwargs):
+        """ updates attributes of rectangle """
         if args and type(args) is not dict:
             self.id = args[0]
             if len(args) > 1:
@@ -113,6 +118,7 @@ class Rectangle(Base):
                 self.y = kwargs['y']
 
     def to_dictionary(self):
+        """ returns dictionary of all attributes """
         rec_dict = {}
         rec_dict['x'] = self.x
         rec_dict['y'] = self.y
