@@ -13,7 +13,7 @@ if __name__ == "__main__":
                          passwd=args[2],
                          db=args[3])
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id"\
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
                    .format(args[4]))
     rows = cursor.fetchall()
     for row in rows:
