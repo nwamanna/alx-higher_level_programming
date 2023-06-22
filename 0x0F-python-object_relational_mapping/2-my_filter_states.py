@@ -13,8 +13,8 @@ if __name__ == "__main__":
                          passwd=args[2],
                          db=args[3])
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = %s ORDER BY id",
-                   (args[4],))
+    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id"\
+                   .format(args[4]))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
