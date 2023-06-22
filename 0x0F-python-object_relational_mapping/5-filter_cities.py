@@ -18,12 +18,6 @@ if __name__ == "__main__":
                    ORDER BY c.id;"
     cursor.execute(query, (args[4],))
     rows = cursor.fetchall()
-    count = 0
-    for row in rows:
-        print(row[0], end="")
-        if count < (len(rows) - 1):
-            print(", ", end="")
-        else:
-            print()
-        count += 1
+    result = [row[0] for row in rows]
+    print(*result, sep=", ")
     cursor.close()
