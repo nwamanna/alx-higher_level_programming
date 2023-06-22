@@ -16,7 +16,7 @@ if __name__ == "__main__":
     query = session.query(State).order_by(State.id)
     result = query.filter(State.id == 2)
     ins = result.one_or_none()
-    if ins == None:
+    if ins is None:
         print("Not found")
     else:
         ins.name = "New Mexico"
