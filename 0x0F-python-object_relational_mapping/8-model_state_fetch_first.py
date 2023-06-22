@@ -17,5 +17,5 @@ if __name__ == "__main__":
     instance = query.first()
     if instance:
         print('{}: {}'.format(instance.id, instance.name))
-    else :
+    else:
         print("Nothing")
